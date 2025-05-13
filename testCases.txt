@@ -1,0 +1,124 @@
+I'll help you create various test cases for different ways to query information about names in the Sahasranama, taking into account alternative spellings and different types of information requests.
+
+Let me create comprehensive test cases covering different aspects:
+
+## Spelling Variation Tests
+
+1. Standard query with correct IAST spelling:
+
+what have you got on Vishnu
+explain yoga in detail
+explain yoga in short
+   - "What is the meaning of Viśvam?"
+   - "Tell me about Bhūtabhavanaḥ"
+
+2. Common English transliteration:
+   - "What is the meaning of Vishvam?"
+   - "Tell me about Bhutabhavanah"
+
+3. Partial/incorrect diacritics:
+   - "What is the meaning of Visvam?"
+   - "Tell me about Bhūtabhavanah"
+   - "Information on Bhutabhavanaḥ"
+
+4. Missing diacritics completely:
+   - "What is the meaning of Visvam?"
+   - "Tell me about Bhutabhavanah"
+
+## Position Queries
+
+1. Direct position query:
+   - "What position is Viśvam in the Sahasranama?"
+   - "Which number is Bhūtabhavanaḥ in Vishnu Sahasranama?"
+
+2. Reverse position query:
+   - "Which name is at position 1 in the Sahasranama?"
+   - "What is the 23rd name in Vishnu Sahasranama?"
+
+3. Comparative position:
+   - "Is Viśvam before Bhūtabhavanaḥ in the Sahasranama?"
+   - "Which names come between Viśvam and Viṣṇuḥ?"
+
+## Etymology Queries
+
+1. Direct etymology requests:
+   - "What is the prakṛyā of Viśvam?"
+   - "Explain the derivation of Bhūtabhavanaḥ"
+
+2. Root word queries:
+   - "What is the dhātu of Viśvam?"
+   - "From which root word is Bhūtabhavanaḥ derived?"
+
+3. Grammatical formation:
+   - "What pratyaya is used in forming Viśvam?"
+   - "Explain the grammatical components of Bhūtabhavanaḥ"
+
+## Meaning Queries
+
+1. Direct meaning:
+   - "What is the artha of Viśvam?"
+   - "Explain the meaning of Bhūtabhavanaḥ"
+
+2. Contextual meaning:
+   - "Why is Vishnu called Viśvam?"
+   - "How does the name Bhūtabhavanaḥ relate to Vishnu's qualities?"
+
+3. Philosophical interpretation:
+   - "What is the philosophical significance of Viśvam?"
+   - "How does Bhūtabhavanaḥ reflect Vishnu's cosmic role?"
+
+## Grammatical Queries
+
+1. Gender queries:
+   - "What is the liṅga of Viśvam?"
+   - "Is Bhūtabhavanaḥ masculine or neuter?"
+
+2. Word breakdown:
+   - "What is the vigrahavākya of Viśvam?"
+   - "Provide the word breakdown for Bhūtabhavanaḥ"
+
+## Multi-property Queries
+
+1. Combined information request:
+   - "Tell me the position, meaning, and etymology of Viśvam"
+   - "Give all information about Bhūtabhavanaḥ"
+
+
+## Edge Cases
+
+1. Multiple possible matches:
+   - "Tell me about names related to 'bhūta' in the Sahasranama"
+   - "Which names contain 'vi' in their root?"
+
+2. Extremely misspelled but recognizable:
+   - "What is the meaning of Vishwam?"
+   - "Tell me about Bootabhavanah"
+
+3. Ambiguous queries:
+   - "What is Vishnu's first name?"
+   - "Tell me about the universe name"
+
+
+
+
+#Must do These
+
+2. Comparative information:
+   - "Compare the meanings of Viśvam and Viṣṇuḥ"
+   - "How are the derivations of Viśvam and Bhūtabhavanaḥ different?"
+
+## Complex Semantic Queries
+
+1. Thematic grouping:
+   - "Which names in the Sahasranama relate to Vishnu's universal form?"
+   - "List all names related to protection in the Sahasranama"
+
+2. Conceptual queries:
+   - "Which name describes Vishnu as the creator of beings?"
+   - "Is there a name that refers to Vishnu as all-pervading?"
+
+3. Attribute-based search:
+   - "Find names in Sahasranama with neuter gender"
+   - "Which names use the root 'viś' in their formation?"
+
+These test cases should cover a wide range of query variations that your system might encounter, testing its ability to handle spelling variations, different information requests, and various ways users might formulate their questions.

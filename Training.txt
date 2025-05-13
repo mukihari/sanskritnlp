@@ -1,0 +1,37 @@
+Step-by-Step Editing Guide
+When you want to make changes yourself, follow these steps:
+
+For adding new names or editing existing ones:
+
+Edit the dictionary.py file to add or modify entries in the vishnu_sahasranama dictionary
+Follow the structure of your example with prakṛyā, vigrahavākya, artha, liṅga, and position
+
+
+For improving name recognition:
+
+Add common spelling variations to the dictionary or a separate mapping
+Adjust the fuzzy matching threshold in _fuzzy_search_names
+
+
+For enhancing query types:
+
+Add new keywords to the intents dictionary
+Create a new response format in the _format_response method
+Implement any specialized logic in the process_query method
+
+
+For concept-based searching:
+
+Add concept groups in the _build_concept_mappings method
+Ensure names have detailed artha fields for automatic concept extraction
+
+
+
+Testing Your Changes
+After making edits:
+
+Print debug information by setting debug_mode = True in the process_query method
+Test with various spellings and query types
+Add print statements to see how entities are being extracted and matched
+
+This approach will help you understand how the system works and make targeted edits with minimal outside help.

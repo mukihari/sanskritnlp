@@ -1,0 +1,100 @@
+"""
+Vishnu Sahasranama Nirukti Project - Structure and Setup
+
+This document outlines the project structure and provides setup instructions
+for the Vishnu Sahasranama Nirukti web application.
+"""
+
+"""
+Project Structure:
+-----------------
+
+/vishnu_nirukti_project/
+├── app.py                  # Main Flask application (entry point)
+├── sanskritphonetic.py     # Sanskrit Phonetic Engine
+├── sanskrit_nlp.py         # Sanskrit NLP System
+├── dictionary_108.py       # Vishnu Ashtottaram dictionary
+├── requirements.txt        # Python dependencies
+├── templates/              # Flask HTML templates
+│   └── index.html          # Main interface template
+└── static/                 # Static assets (if needed)
+    └── css/                # CSS stylesheets (if needed)
+       └── custom.css       # Custom styles (if needed)
+
+Setup Instructions:
+-----------------
+
+1. Create a new project directory:
+   ```bash
+   mkdir vishnu_nirukti_project
+   cd vishnu_nirukti_project
+   ```
+
+2. Create a virtual environment (optional but recommended):
+   ```bash
+   python -m venv env
+   
+   # Activate the virtual environment:
+   # On Windows:
+   env\\Scripts\\activate
+   
+   # On macOS/Linux:
+   source env/bin/activate
+   ```
+
+3. Create the following Python files:
+   - sanskritphonetic.py (Sanskrit Phonetic Engine)
+   - sanskrit_nlp.py (Sanskrit NLP System)
+   - dictionary_108.py (already exists with the Vishnu Ashtottaram dictionary)
+   - app.py (Flask Web Interface)
+
+4. Create a requirements.txt file with the following content:
+   ```
+   Flask==2.0.1
+   fuzzywuzzy==0.18.0
+   python-Levenshtein==0.12.2
+   ```
+
+5. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+6. The app.py file will automatically create the templates directory and index.html file
+   when run for the first time.
+
+7. Run the application:
+   ```bash
+   python app.py
+   ```
+
+8. Open a web browser and navigate to:
+   http://localhost:8000
+
+Troubleshooting:
+--------------
+
+1. If you encounter any issues with dictionary import, make sure the dictionary_108.py file 
+   is in the same directory as the other Python files.
+
+2. If you get an error about missing templates, make sure the app has permission to create
+   the templates directory and write files to it.
+
+3. For any other issues, check the application logs for error messages.
+
+Additional Notes:
+---------------
+
+1. The application uses port 8000 by default. You can change this in the app.py file
+   if needed.
+
+2. The debug mode is enabled by default, which is useful during development but should
+   be disabled in production.
+
+3. The Sanskrit Phonetic Engine and NLP System are designed to work together, with the
+   phonetic engine handling the low-level text processing and the NLP system providing
+   higher-level functionality.
+
+4. The web interface includes a debug mode that can be enabled for development and
+   troubleshooting.
+"""

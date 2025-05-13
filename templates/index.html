@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishnu Ashtottaranama Nirukti</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f7f7f7;
+            --container-bg: white;
+            --text-color: #333;
+            --header-color: #000;
+            --user-msg-bg: #dcf8c6;
+            --assistant-msg-bg: #f1f0f0;
+            --button-primary: #4CAF50;
+            --button-primary-hover: #3d8b3d;
+            --input-bg: white;
+            --border-color: #ddd;
+        }
+        
+        .dark-mode {
+            --bg-color: #121212;
+            --container-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --header-color: #f0f0f0;
+            --user-msg-bg: #005c4b;
+            --assistant-msg-bg: #2a2d2e;
+            --button-primary: #2e7d32;
+            --button-primary-hover: #1b5e20;
+            --input-bg: #333;
+            --border-color: #444;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Arial', sans-serif;
+            transition: background-color 0.3s ease;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin-top: 30px;
+            position: relative;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .dark-mode .container {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .chat-container {
+            height: 60vh;
+            overflow-y: auto;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            padding: 15px;
+            background-color: var(--container-bg);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .user-message {
+            background-color: var(--user-msg-bg);
+            padding: 10px 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            max-width: 80%;
+            margin-left: auto;
+            word-wrap: break-word;
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .assistant-message {
+            background-color: var(--assistant-msg-bg);
+            padding: 10px 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            max-width: 80%;
+            word-wrap: break-word;
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .input-group {
+            margin-top: 15px;
+        }
+        
+        #queryInput {
+            border-radius: 20px 0 0 20px;
+            padding-left: 15px;
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            border-color: var(--border-color);
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        #sendButton {
+            border-radius: 0 20px 20px 0;
+            background-color: var(--button-primary);
+            border-color: var(--button-primary);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        #sendButton:hover {
+            background-color: var(--button-primary-hover);
+            border-color: var(--button-primary-hover);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .header h1, .header h3 {
+            color: var(--header-color);
+            transition: color 0.3s ease;
+        }
+        
+        .sanskrit {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        .user-message, .assistant-message {
+    display: block; /* Change from inline-block to block */
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 15px; /* Increase spacing between messages */
+    word-wrap: break-word;
+    max-width: 80%;
+    clear: both; /* Ensure messages don't float next to each other */
+}
+
+.user-message {
+    background-color: var(--user-msg-bg);
+    color: var(--text-color);
+    margin-left: auto; /* Push to right side */
+    margin-right: 0;
+    text-align: left;
+}
+
+.assistant-message {
+    background-color: var(--assistant-msg-bg);
+    color: var(--text-color);
+    margin-left: 0;
+    margin-right: auto; /* Push to left side */
+    text-align: left;
+}
+
+/* To ensure proper chat flow */
+#chatContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+/* Ensure the typing text works properly */
+.typing-text {
+    white-space: pre-wrap;
+    display: inline;
+}
+        
+        .loading {
+            text-align: center;
+            margin: 20px 0;
+            font-style: italic;
+            color: #666;
+        }
+        
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background-color: var(--assistant-msg-bg);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .suggestion-btn {
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--assistant-msg-bg);
+            color: var(--text-color);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .dark-mode-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        .dark-mode-toggle:active {
+            transform: scale(0.95);
+        }
+        
+        /* Typing animation styles */
+        .typing-indicator {
+            display: inline-block;
+            overflow: hidden;
+            white-space: pre-wrap;
+            border-right: 2px solid var(--text-color);
+            width: 0;
+            max-width: 100%;
+            animation: blink-caret 0.75s step-end infinite;
+            position: relative;
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--text-color); }
+        }
+        
+        .modal-content {
+            background-color: var(--container-bg);
+            color: var(--text-color);
+        }
+        
+        .modal-header {
+            border-bottom-color: var(--border-color);
+        }
+        
+        .btn-close {
+            filter: invert(var(--dark-mode-invert));
+        }
+        
+        .btn-outline-secondary, .btn-outline-info {
+            color: var(--text-color);
+            border-color: var(--border-color);
+        }
+        
+        .btn-outline-secondary:hover, .btn-outline-info:hover {
+            background-color: var(--assistant-msg-bg);
+            color: var(--text-color);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+            <svg id="lightModeIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg id="darkModeIcon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+
+        <div class="header">
+            <h1>विष्णुअष्टोत्तरशतनाम निरुक्ति</h1>
+            <h3>An interactive dictionary for Viṣṇu Aṣṭottaraśatanāma</h3>
+            <p class="text-muted">Learn the principle 108 names of Lord Viṣṇu</p>
+        </div>
+        
+        <div class="chat-container" id="chatContainer">
+            <div class="assistant-message">
+                Jay Śrī Rāma! Namaste! 🙏 I'm your assistant for the Viṣṇu Aṣṭottaraśatanāma dictionary. 
+                You can ask me about the meanings, etymology, and analysis of the names in the Viṣṇu Aṣṭottaraśatanāma.
+                <br><br>
+                For example, try asking:
+                <ul>
+                    <li>What does Viṣṇu mean?</li>
+                    <li>Explain the etymology of Keśava</li>
+                    <li>What is the vigrahavākya of Puruṣottama?</li>
+                    <li>Find names related to creation</li>
+                    <li>What is the mantra for Mādhava?</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="input-group">
+            <input type="text" id="queryInput" class="form-control" placeholder="Ask a question...">
+            <button class="btn btn-primary" id="sendButton">Send</button>
+        </div>
+        
+        <div class="mt-3">
+            <button class="btn btn-sm btn-outline-secondary" id="showNames">Show All Names</button>
+            <button class="btn btn-sm btn-outline-secondary" id="clearChat">Clear Chat</button>
+            <button class="btn btn-sm btn-outline-secondary" id="resetContext">Reset Context</button>
+            <button class="btn btn-sm btn-outline-info" id="debugMode">Debug Mode</button>
+        </div>
+        
+        <!-- Names Modal -->
+        <div class="modal fade" id="namesModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Viṣṇu Aṣṭottaraśatanāma - All Names</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="nameSearch" placeholder="Search names...">
+                        </div>
+                        <div id="namesList" class="row"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Debug Modal -->
+        <div class="modal fade" id="debugModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Query Analysis (Debug Mode)</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="debugQuery" placeholder="Enter query to analyze...">
+                            <button class="btn btn-primary" id="analyzeQueryBtn">Analyze</button>
+                        </div>
+                        <div id="queryAnalysis">
+                            <pre id="analysisResult"></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOM fully loaded");
+        
+        const chatContainer = document.getElementById('chatContainer');
+        const queryInput = document.getElementById('queryInput');
+        const sendButton = document.getElementById('sendButton');
+        const showNamesButton = document.getElementById('showNames');
+        const clearChatButton = document.getElementById('clearChat');
+        const resetContextButton = document.getElementById('resetContext');
+        const debugModeButton = document.getElementById('debugMode');
+        const namesModal = new bootstrap.Modal(document.getElementById('namesModal'));
+        const debugModal = new bootstrap.Modal(document.getElementById('debugModal'));
+        const namesList = document.getElementById('namesList');
+        const nameSearch = document.getElementById('nameSearch');
+        const debugQuery = document.getElementById('debugQuery');
+        const analyzeQueryBtn = document.getElementById('analyzeQueryBtn');
+        const analysisResult = document.getElementById('analysisResult');
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const lightModeIcon = document.getElementById('lightModeIcon');
+        const darkModeIcon = document.getElementById('darkModeIcon');
+        
+        let allNames = [];
+        let debugMode = false;
+        let isTyping = false;
+        
+        // Check for saved theme preference or use system preference
+        const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme');
+        
+        if (savedTheme === 'dark' || (!savedTheme && prefersDarkMode)) {
+            document.body.classList.add('dark-mode');
+            lightModeIcon.style.display = 'none';
+            darkModeIcon.style.display = 'block';
+            document.documentElement.style.setProperty('--dark-mode-invert', '1');
+        } else {
+            document.documentElement.style.setProperty('--dark-mode-invert', '0');
+        }
+        
+        // Dark mode toggle functionality
+        darkModeToggle.addEventListener('click', function() {
+            console.log("Dark mode toggle clicked");
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            
+            if (isDarkMode) {
+                lightModeIcon.style.display = 'none';
+                darkModeIcon.style.display = 'block';
+                localStorage.setItem('theme', 'dark');
+                document.documentElement.style.setProperty('--dark-mode-invert', '1');
+            } else {
+                lightModeIcon.style.display = 'block';
+                darkModeIcon.style.display = 'none';
+                localStorage.setItem('theme', 'light');
+                document.documentElement.style.setProperty('--dark-mode-invert', '0');
+            }
+        });
+        
+        // Typing animation function - improved for character-by-character display
+       
+        function typeMessage(element, text, callback) {
+    isTyping = true;
+    console.log("Starting formatted typing animation");
+    
+    // Parse the HTML to separate text nodes from formatted elements
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = text;
+    
+    // Clear the element first
+    element.innerHTML = '';
+    
+    // Find special elements like buttons that shouldn't be typed
+    const specialElements = [];
+    const buttonsAndSpecial = tempDiv.querySelectorAll('button, .btn, ul, pre, strong, em');
+    buttonsAndSpecial.forEach(el => {
+        specialElements.push({
+            element: el,
+            html: el.outerHTML,
+            textContent: el.textContent
+        });
+    });
+    
+    // Replace buttons with placeholders in the typing text
+    specialElements.forEach((item, index) => {
+        const placeholder = `__SPECIAL_ELEMENT_${index}__`;
+        const regex = new RegExp(item.element.outerHTML.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+        tempDiv.innerHTML = tempDiv.innerHTML.replace(regex, placeholder);
+    });
+    
+    // Extract text to type
+    const textToType = tempDiv.textContent;
+    
+    // Create a typing container
+    const typingContainer = document.createElement('div');
+    element.appendChild(typingContainer);
+    
+    // Set initial HTML with all special elements already rendered
+    let initialHTML = text;
+    specialElements.forEach(item => {
+        // Keep the special elements intact
+        typingContainer.innerHTML = initialHTML;
+    });
+    
+    // Hide all text nodes initially
+    const walker = document.createTreeWalker(
+        typingContainer,
+        NodeFilter.SHOW_TEXT,
+        null,
+        false
+    );
+    
+    const textNodes = [];
+    let node;
+    while (node = walker.nextNode()) {
+        if (node.textContent.trim() !== '') {
+            textNodes.push(node);
+            // Store original text and clear it
+            node._originalText = node.textContent;
+            node.textContent = '';
+        }
+    }
+    
+    // If there are no text nodes (plain text only), just set the text directly
+    if (textNodes.length === 0) {
+        typingContainer.textContent = text;
+        isTyping = false;
+        if (callback) callback();
+        return;
+    }
+    
+    // Type text nodes character by character
+    let currentNodeIndex = 0;
+    let currentCharIndex = 0;
+    const typeSpeed = 15; // Fast typing speed
+    
+    function typeNextChar() {
+        if (currentNodeIndex >= textNodes.length) {
+            // Typing complete
+            isTyping = false;
+            if (callback) callback();
+            return;
+        }
+        
+        const currentNode = textNodes[currentNodeIndex];
+        const originalText = currentNode._originalText;
+        
+        if (currentCharIndex < originalText.length) {
+            // Add next character to current node
+            currentNode.textContent += originalText.charAt(currentCharIndex);
+            currentCharIndex++;
+            
+            // Scroll while typing
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+            
+            // Continue typing
+            setTimeout(typeNextChar, typeSpeed);
+        } else {
+            // Move to next text node
+            currentNodeIndex++;
+            currentCharIndex = 0;
+            setTimeout(typeNextChar, typeSpeed);
+        }
+    }
+    
+    // Start typing
+    typeNextChar();
+}
+
+        
+        // Handle sending a query
+        function sendQuery() {
+            // If already typing, don't send a new query
+            if (isTyping) return;
+            
+            const query = queryInput.value.trim();
+            if (query === '') return;
+            
+            // Add user message to chat
+            const userMessage = document.createElement('div');
+            userMessage.className = 'user-message';
+            userMessage.textContent = query;
+            chatContainer.appendChild(userMessage);
+            
+            // Add loading indicator
+            const loadingDiv = document.createElement('div');
+            loadingDiv.className = 'loading';
+            loadingDiv.textContent = 'Thinking...';
+            chatContainer.appendChild(loadingDiv);
+            
+            // Scroll to bottom
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+            
+            // Clear input
+            queryInput.value = '';
+            
+            // Send query to server
+            fetch('/query', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ query: query })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Remove loading indicator
+                chatContainer.removeChild(loadingDiv);
+                
+                // Add assistant message to chat
+                const assistantMessage = document.createElement('div');
+                assistantMessage.className = 'assistant-message';
+                chatContainer.appendChild(assistantMessage);
+                
+                let responseText = data.response;
+                
+                // Fallback for empty/undefined responses
+                if (!responseText || responseText.trim() === "") {
+                    responseText = "Sorry, I couldn't find any information for your query.";
+                }
+                
+                console.log("Assistant responseText:", responseText);
+                
+                // Convert bullet points
+                responseText = responseText.replace(/^•\s+(.+)$/gm, '<li>$1</li>');
+                
+                // Handle lists better
+                let listItems = responseText.match(/<li>(.+?)<\/li>/g);
+                if (listItems) {
+                    let listHTML = '<ul>';
+                    listItems.forEach(item => {
+                        listHTML += item;
+                    });
+                    listHTML += '</ul>';
+                    responseText = responseText.replace(/<li>(.+?)<\/li>/g, '');
+                    responseText += listHTML;
+                }
+                
+                // Convert bold text
+                responseText = responseText.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+                
+                // Convert italics
+                responseText = responseText.replace(/\*(.+?)\*/g, '<em>$1</em>');
+                
+                // Convert code/pre blocks
+                responseText = responseText.replace(/```(.+?)```/gs, '<pre>$1</pre>');
+                
+                // Convert line breaks
+                responseText = responseText.replace(/\n\n/g, '<br><br>');
+                
+                // Handle "Did you mean" suggestions with a more conversational approach
+                if (responseText.includes('Did you mean:')) {
+                    const beforeSuggestions = responseText.split('Did you mean:')[0];
+                    const afterSuggestions = responseText.split('Did you mean:')[1];
+                    
+                    const suggestionsText = afterSuggestions.split('?')[0].trim();
+                    const afterText = afterSuggestions.split('?')[1] || '';
+                    
+                    // Extract the name from the suggestion
+                    const nameMatch = suggestionsText.match(/(.+?)\s*\(/);
+                    const name = nameMatch ? nameMatch[1].trim() : suggestionsText;
+                    
+                    // Add quick reply buttons for Yes/No
+                    const yesNoButtons = `
+                        <div class="mt-2 mb-2">
+                            <button class="btn btn-sm btn-success me-2" onclick="respondYes()">Yes, that's it</button>
+                            <button class="btn btn-sm btn-danger" onclick="respondNo()">No, that's not it</button>
+                        </div>
+                    `;
+                    
+                    // Combine everything
+                    responseText = beforeSuggestions + 'Did you mean: <strong>' + name + '</strong>?' + 
+                                  '<br>' + afterText + yesNoButtons;
+                }
+                
+                // Use typing animation for the response
+                typeMessage(assistantMessage, responseText, 0, function() {
+                    // Callback after typing is complete
+                    if (debugMode && data.context) {
+                        const contextDiv = document.createElement('div');
+                        contextDiv.className = 'assistant-message';
+                        contextDiv.innerHTML = '<strong>Context:</strong><pre>' + JSON.stringify(data.context, null, 2) + '</pre>';
+                        chatContainer.appendChild(contextDiv);
+                    }
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
+                });
+                
+                // Scroll to bottom while typing
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            })
+            .catch(error => {
+                // Remove loading
+                // Remove loading indicator
+                chatContainer.removeChild(loadingDiv);
+                
+                // Add error message
+                const errorMessage = document.createElement('div');
+                errorMessage.className = 'assistant-message';
+                chatContainer.appendChild(errorMessage);
+                
+                // Use typing animation for error message
+                typeMessage(errorMessage, 'Sorry, an error occurred. Please try again.');
+                
+                console.error('Error:', error);
+            });
+        }
+        
+        // Functions for Yes/No response buttons
+        window.respondYes = function() {
+            queryInput.value = "yes";
+            sendQuery();
+        };
+        
+        window.respondNo = function() {
+            queryInput.value = "no";
+            sendQuery();
+        };
+        
+        // Event listeners
+        sendButton.addEventListener('click', sendQuery);
+        
+        queryInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendQuery();
+            }
+        });
+        
+        // Load names for the modal
+        showNamesButton.addEventListener('click', function() {
+            if (allNames.length === 0) {
+                // Fetch names from server
+                fetch('/list_names')
+                    .then(response => response.json())
+                    .then(data => {
+                        allNames = data.names;
+                        displayNames(allNames);
+                        namesModal.show();
+                    })
+                    .catch(error => {
+                        console.error('Error fetching names:', error);
+                    });
+            } else {
+                displayNames(allNames);
+                namesModal.show();
+            }
+        });
+        
+        // Debug mode toggle
+        debugModeButton.addEventListener('click', function() {
+            debugMode = !debugMode;
+            if (debugMode) {
+                debugModeButton.classList.remove('btn-outline-info');
+                debugModeButton.classList.add('btn-info');
+                debugModeButton.textContent = 'Debug Mode (ON)';
+                
+                // Show debug modal
+                debugModal.show();
+            } else {
+                debugModeButton.classList.remove('btn-info');
+                debugModeButton.classList.add('btn-outline-info');
+                debugModeButton.textContent = 'Debug Mode';
+            }
+        });
+        
+        // Analyze query in debug mode
+        analyzeQueryBtn.addEventListener('click', function() {
+            const query = debugQuery.value.trim();
+            if (!query) return;
+            
+            fetch('/analyze_query', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ query: query })
+            })
+            .then(response => response.json())
+            .then(data => {
+                analysisResult.textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                analysisResult.textContent = 'Error: ' + error;
+            });
+        });
+        
+        // Search names in the modal
+        nameSearch.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const filteredNames = allNames.filter(name => 
+                name.toLowerCase().includes(searchTerm)
+            );
+            displayNames(filteredNames);
+        });
+        
+        // Display names in the modal
+        function displayNames(names) {
+            namesList.innerHTML = '';
+            names.forEach(name => {
+                const nameDiv = document.createElement('div');
+                nameDiv.className = 'col-md-4 mb-2';
+                const nameBtn = document.createElement('button');
+                nameBtn.className = 'btn btn-outline-primary btn-sm w-100 text-start sanskrit';
+                nameBtn.textContent = name;
+                nameBtn.addEventListener('click', function() {
+                    queryInput.value = `Tell me about ${name}`;
+                    namesModal.hide();
+                    sendQuery();
+                });
+                nameDiv.appendChild(nameBtn);
+                namesList.appendChild(nameDiv);
+            });
+        }
+        
+        // Clear chat
+        clearChatButton.addEventListener('click', function() {
+            // Keep only the first assistant message
+            while (chatContainer.children.length > 1) {
+                chatContainer.removeChild(chatContainer.lastChild);
+            }
+        });
+        
+        // Reset context
+        resetContextButton.addEventListener('click', function() {
+            fetch('/reset_context', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({})
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Add a message to chat
+                const message = document.createElement('div');
+                message.className = 'assistant-message';
+                chatContainer.appendChild(message);
+                
+                // Use typing animation
+                typeMessage(message, 'Conversation context has been reset.');
+                
+                // Scroll to bottom
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            })
+            .catch(error => {
+                console.error('Error resetting context:', error);
+            });
+        });
+    });
+    </script>
+</body>
+</html>
