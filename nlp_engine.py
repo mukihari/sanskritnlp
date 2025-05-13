@@ -457,7 +457,7 @@ class SanskritNLP:
             
             response = f"I found partial matches for '{potential_name}'.\n\n"
             response += f"Did you mean: {', '.join(suggestions)}?\n\n"
-            response += f"Please confirm by typing 1, 2, or 3 to select, or 'yes' for the first option."
+            response += f"Please confirm by typing Yes or No, or select, from the option below."
             
             return response
         
