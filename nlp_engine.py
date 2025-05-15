@@ -66,23 +66,34 @@ class SanskritNLP:
                 r"what does (.+?) mean",
                 r"define (.+)",
                 r"translation of (.+)",
+                r"I want to know what (.+?) means"
+                r"meaning of the word (.+)",
                 r"artha(?: of)? (.+)",
                 r"(.+) artha"
             ],
 
             "etymology": [
-                r"(?:what is|explain|give me|show|tell me)?\s*(?:the)?\s*(etymology|origin|derivation|root|dhatu|prakriya|prakṛyā)(?: of)?\s*(.+)",
+                r"(?:what is|explain|give me|show|tell me)?\s*(?:the)?\s*(?:etymology|origin|derivation|root|dhatu|prakriya|prakṛyā)(?: of)?\s*(.+)",
                 r"how is (.+?) derived",
                 r"where does (.+?) come from",
+                r"derive (.+)",
                 r"how did (.+?) get its name",
-                r"what is the root of (.+)"
+                r"how did (.+?) come about"
+                r"what is the root of (.+)",
+                r"what is the origin of (.+)",
+                r"from which root is (.+?) formed",
+                r"how do you derive (.+)"
             ],
 
             "vigrahavākya": [
-                r"(?:what is|explain|give me|show|tell me)?\s*(?:the)?\s*(vigrahav[āa]kya|vigraha vakya|vigraha|compound breakdown|grammatical breakdown|compound analysis|word breakdown|splitting)(?: of)?\s*(.+)",
+                r"(?:vigrahav[āa]kya|vigraha vakya|vigraha|compound analysis|grammatical breakdown|word breakdown|compound splitting|compound breakdown|splitting|breakdown|break down|split)(?: of)?\s*(.+)",
                 r"how is (.+?) broken down",
-                r"what is the vigraha of (.+)",
-                r"compound splitting of (.+)"
+                r"how is (.+?) broken(?: down)?",
+                r"how do you break down (.+)",
+                r"break down (.+)",
+                r"break (.+)",
+                r"split (?:the word|compound)?\s*(.+)",
+                r"what is the vigraha of (.+)"
             ],
 
             "pranam": [
@@ -98,20 +109,30 @@ class SanskritNLP:
             "analysis": [
                 r"(?:analyze|analyse|explain|describe|give me|tell me|what do you know about|details of|everything about|who is|what is)\s*(.+)",
                 r"analysis of (.+)",
+                r"info on (.+)",
+                r"information on (.+)",
                 r"explanation of (.+)",
                 r"info(?:rmation)? about (.+)"
             ],
 
             "position": [
-                r"(?:what is|tell me|give me|show|which|where)?\s*(?:the)?\s*(position|place|rank|location|number|sequence)(?: of)?\s*(.+)",
-                r"where is (.+?) (located|mentioned|found)",
+                r"(?:what is|tell me|give me|show|which|where)?\s*(?:the)?\s*(?:position|place|rank|location|number|sequence)\s*(?:of)?\s*(.+)",
+                r"where is (.+?) (?:located|mentioned|found)",
                 r"what number is (.+)",
                 r"which position is (.+)",
+                r"what is the position of (.+)",
+                r"(?:loc|pos) of (.+)",
+                r"(.+) is at what number",
+                r"(.+) is at what position",
+                r"(.+) is at what place",
+                r"(.+) position",
+                r"(.+) (?:loc|pos)",
                 r"sequence number of (.+)",
                 r"(.+) comes at what number",
                 r"(.+) is at what position",
                 r"at what place is (.+)"
             ]
+
         }
 
         
