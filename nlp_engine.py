@@ -62,83 +62,58 @@ class SanskritNLP:
         # Intent patterns for regex matching
         self.intent_patterns = {
             "meaning": [
-                r"meaning of (.+)",
-                r"explain the meaning of (.+)",
-                r"what does (.+) mean",
+                r"(?:give me|tell me|show|explain|what(?: is| does)?|provide)?\s*(?:the)?\s*meaning(?: of)?\s*(.+)",
+                r"what does (.+?) mean",
                 r"define (.+)",
                 r"translation of (.+)",
-                r"artha of (.+)",
+                r"artha(?: of)? (.+)",
                 r"(.+) artha"
             ],
-            
+
             "etymology": [
-                r"etymology of (.+)",
-                r"origin of (.+)",
-                r"prakr[iy]a of (.+)",
-                r"prakriya of (.+)",
-                r"derivation of (.+)",
-                r"how is (.+) derived",
-                r"root of (.+)",
-                r"dhatu of (.+)",
-                r"where does (.+) come from",
-                r"how did (.+) get its name"
+                r"(?:what is|explain|give me|show|tell me)?\s*(?:the)?\s*(etymology|origin|derivation|root|dhatu|prakriya|prakṛyā)(?: of)?\s*(.+)",
+                r"how is (.+?) derived",
+                r"where does (.+?) come from",
+                r"how did (.+?) get its name",
+                r"what is the root of (.+)"
             ],
-            
+
             "vigrahavākya": [
-                r"vigrahav[āa]kya of (.+)",
-                r"vigraha vakya of (.+)",
-                r"vigraha of (.+)",
-                r"breakdown of (.+)",
-                r"compound analysis of (.+)",
-                r"grammatical breakdown of (.+)",
-                r"word breakdown of (.+)",
-                r"compound splitting of (.+)",
-                r"how is (.+) broken down",
-                r"what is the vigraha of (.+)"
+                r"(?:what is|explain|give me|show|tell me)?\s*(?:the)?\s*(vigrahav[āa]kya|vigraha vakya|vigraha|compound breakdown|grammatical breakdown|compound analysis|word breakdown|splitting)(?: of)?\s*(.+)",
+                r"how is (.+?) broken down",
+                r"what is the vigraha of (.+)",
+                r"compound splitting of (.+)"
             ],
-            
+
             "pranam": [
-                r"caturth[īi] of (.+)",
-                r"pranam of (.+)",
-                r"pranam for (.+)",
-                r"mantra for (.+)",
+                r"(?:what is|give me|show|tell me|how to)?\s*(?:the)?\s*(pranam|caturth[īi]|mantra|salutation|prayer|offering|worship)(?: for| of)?\s*(.+)",
                 r"how to worship (.+)",
                 r"how to offer pranam to (.+)",
                 r"salutation to (.+)",
+                r"mantra for (.+)",
                 r"prayer for (.+)",
-                r"what is the caturth[īi] of (.+)",
-                r"what is the pranam for (.+)"
+                r"(.+) caturth[īi]"
             ],
-            
+
             "analysis": [
-                r"analyze (.+)",
-                r"analyse (.+)",
-                r"explain (.+)",
-                r"tell me about (.+)",
-                r"what you know of (.+)",
-                r"everything about (.+)",
-                r"analysis of (.+)"
+                r"(?:analyze|analyse|explain|describe|give me|tell me|what do you know about|details of|everything about|who is|what is)\s*(.+)",
+                r"analysis of (.+)",
+                r"explanation of (.+)",
+                r"info(?:rmation)? about (.+)"
             ],
-            
+
             "position": [
-                r"position of (.+)",
-                r"where is (.+)",
+                r"(?:what is|tell me|give me|show|which|where)?\s*(?:the)?\s*(position|place|rank|location|number|sequence)(?: of)?\s*(.+)",
+                r"where is (.+?) (located|mentioned|found)",
                 r"what number is (.+)",
-                r"what position is (.+)",
                 r"which position is (.+)",
                 r"sequence number of (.+)",
-                r"rank of (.+)",
-                r"location of (.+)",
-                r"where is (.+) located",
-                r"where does (.+) appear",
-                r"at what place is (.+)",
-                r"which place does (.+) have",
-                r"sequence of (.+)",
-                r"(.+) is at what position",
                 r"(.+) comes at what number",
-                r"which number is (.+)"
+                r"(.+) is at what position",
+                r"at what place is (.+)"
             ]
         }
+
         
         # Classification for query types
         self.query_classes = {

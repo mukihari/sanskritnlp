@@ -3546,3 +3546,90 @@ You can ask for more details about this name.
 **Etymology**: (Complex etymology with multiple components)
 
 2025-05-12 13:49:16,163 - werkzeug - INFO - 127.0.0.1 - - [12/May/2025 13:49:16] "POST /query HTTP/1.1" 200 -
+2025-05-13 15:44:14,766 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://127.0.0.1:8000
+2025-05-13 15:44:14,767 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-13 15:44:14,767 - werkzeug - INFO -  * Restarting with stat
+2025-05-13 15:44:14,885 - werkzeug - WARNING -  * Debugger is active!
+2025-05-13 15:44:14,892 - werkzeug - INFO -  * Debugger PIN: 130-135-246
+2025-05-13 15:45:18,209 - werkzeug - INFO - 127.0.0.1 - - [13/May/2025 15:45:18] "GET / HTTP/1.1" 200 -
+2025-05-13 15:45:35,815 - werkzeug - INFO - 127.0.0.1 - - [13/May/2025 15:45:35] "GET /list_names HTTP/1.1" 200 -
+2025-05-13 15:45:42,650 - __main__ - INFO - Processing query: Tell me about Lakṣmīpati
+2025-05-13 15:45:42,659 - __main__ - INFO - Response: **Analysis of Lakṣmīpati**:
+
+
+**Meaning**: An epiphet of Lord Viṣṇu signifying, He is the Husband of Lakshmi, The Supreme Lord who possesses all wealth, fortune, and splendor, An epithet of Lord Viṣṇu.
+
+
+**Etymology**: {'lakṣmī': "lakṣ = lakṣaṇalabdhoḥ (to perceive, to obtain) + manin-pratyaya (suffix forming a noun indicating possession) → lakṣman (having auspicious marks) +ṅīp-pratyaya (feminine suffix) → 'The goddess of wealth and prosperity'", 'pati': "pā = pālane rakṣaṇe ca (to protect, to nourish) + ti-pratyaya (agent noun suffix) → 'Lord, master, protector'"}
+
+
+**Vigrahavākya**: Lakṣyate iti lakṣmīḥ. Pālayati iti patiḥ. Lakṣmyāḥ patiḥ iti lakṣmīpatiḥ → "The One who is perceived, obtained, or shines as fortune is called Lakṣmīḥ. The One who protects, governs, or rules is called Patiḥ. The One who is the Lord of Lakṣmī is called Lakṣmīpati."
+
+
+**Position**: 2
+
+
+**Pranam Mantra**: oṁ lakṣmīpataye namaḥ
+2025-05-13 15:45:42,660 - werkzeug - INFO - 127.0.0.1 - - [13/May/2025 15:45:42] "POST /query HTTP/1.1" 200 -
+2025-05-13 15:47:00,473 - __main__ - INFO - Processing query: Tell me about Hari
+2025-05-13 15:47:00,476 - __main__ - INFO - Response: **Analysis of Hari**:
+
+
+**Meaning**: The remover of the knot of the heart which is in the form of desires, an epiphet of Viṣṇu.
+
+
+**Etymology**: hṛñ = haraṇe (to take away, to carry) + kvip-pratyaya (suffix forming a noun with an active or possessing connotation) → 'One who takes away'
+
+
+**Vigrahavākya**: Harati hṛdaya granthiṁ vāsanā rūpam iti hariḥ. → "He who takes away the knot of the heart which is in the form of desires is called Hari."
+
+
+**Position**: 30
+
+
+**Pranam Mantra**: oṁ haraye namaḥ
+2025-05-13 15:47:00,477 - werkzeug - INFO - 127.0.0.1 - - [13/May/2025 15:47:00] "POST /query HTTP/1.1" 200 -
+2025-05-13 15:48:07,894 - __main__ - INFO - Processing query: names related to milk
+2025-05-13 15:48:07,898 - __main__ - INFO - Response: ## Names related to 'milk' in the Viṣṇu Aṣṭottaraśatanāmam:
+
+**Kṣīrābdhiśāyī** (#76)
+**Meaning**: An epithet of Lord Viṣṇu, referring to the one who lies down in the Ocean of **milk** (Kṣīrābdhi), which is a metaphor for the cosmic ocean.
+
+2025-05-13 15:48:07,899 - werkzeug - INFO - 127.0.0.1 - - [13/May/2025 15:48:07] "POST /query HTTP/1.1" 200 -
+2025-05-13 15:48:31,630 - __main__ - INFO - Processing query: dashavatara names
+2025-05-13 15:48:31,633 - __main__ - INFO - Response: ## Names related to 'dashavatara' in the Viṣṇu Aṣṭottaraśatanāmam:
+
+**Kṛṣṇa** (#3)
+**Meaning**: An epiphet of Lord Viṣṇu signifying, He is the All-attractive One; Kṛṣṇa Avatāra, also means 'black' or 'dark', the eighth of **dashavatara**.
+
+**Matsyarūpa** (#45)
+**Meaning**: The One who took the form of a fish; an epithet of Lord Viṣṇu, referring to the Matsya avatāra, first of **dashavatara**.
+
+**Kūrmatanu** (#46)
+**Meaning**: An epithet of Lord Viṣṇu, signifying 'The one whose body is a tortoise, referring to the Kūrma avatāra, second of **dashavatara**.'
+
+**Kroḍarūpa** (#47)
+**Meaning**: An epithet of Lord Viṣṇu, signifying 'The one whose form is a boar, referring to the Varāha avatāra, third of **dashavatara**.'
+
+**Nṛkesarī** (#48)
+**Meaning**: An epithet of Lord Viṣṇu, referring to his Narasiṁha avātara, fourth of **dashavatara**.
+
+**Vāmana** (#49)
+**Meaning**: An epithet of Lord Viṣṇu, referring to his Vāmana avātara, fifth of **dashavatara**.
+
+**Bhārgava** (#50)
+**Meaning**: An epithet of Lord Viṣṇu, referring to his Paraśurāma avātara, sixth of **dashavatara**.
+
+**Rāma** (#51)
+**Meaning**: The one who delights all, the embodiment of bliss; an epithet of Lord Viṣṇu, referring to his Rāma avātara, seventh of **dashavatara**.
+
+**Kalkī** (#53)
+**Meaning**: An epithet of Lord Viṣṇu, referring to His future Kalkī avātara, last of **dashavatara**.
+
+**Buddhāvatāra** (#99)
+**Meaning**: An epithet of Lord Viṣṇu, referring to the Buddha Avatāra, ninth of **dashavatara**.
+
+2025-05-13 15:48:31,641 - werkzeug - INFO - 127.0.0.1 - - [13/May/2025 15:48:31] "POST /query HTTP/1.1" 200 -
