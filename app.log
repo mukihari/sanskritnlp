@@ -4212,3 +4212,364 @@ Please confirm by typing Yes or No, or select, from the option below.
 2025-05-15 11:35:28,636 - __main__ - INFO - Processing query: hello
 2025-05-15 11:35:28,646 - __main__ - INFO - Response: I couldn't find any information about 'hello' in my database.
 2025-05-15 11:35:28,647 - werkzeug - INFO - 127.0.0.1 - - [15/May/2025 11:35:28] "POST /query HTTP/1.1" 200 -
+2025-05-19 10:26:33,627 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://127.0.0.1:8000
+2025-05-19 10:26:33,627 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-19 10:26:33,627 - werkzeug - INFO -  * Restarting with stat
+2025-05-19 10:26:33,740 - werkzeug - WARNING -  * Debugger is active!
+2025-05-19 10:26:33,747 - werkzeug - INFO -  * Debugger PIN: 130-135-246
+2025-05-19 10:26:40,684 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:26:40] "GET / HTTP/1.1" 200 -
+2025-05-19 10:26:41,204 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:26:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-19 10:27:51,814 - __main__ - INFO - Processing query: what does vishnu mean
+2025-05-19 10:27:51,825 - __main__ - INFO - Response: **Viṣṇu** means: The first name of Lord Viṣṇu (in the 108 names) signifying, that He is the All-pervading One, The One who reaches and moves everywhere throughout the Universe, The One who generates and sustains everything.
+2025-05-19 10:27:51,825 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:27:51] "POST /query HTTP/1.1" 200 -
+2025-05-19 10:28:09,048 - __main__ - INFO - Processing query: explain the prakriya of keshava
+2025-05-19 10:28:09,051 - __main__ - INFO - Response: **Etymology of Keśava**: {'keśa': "kāsṛ = dīptau (to shine, to radiate) + ghañ-pratyaya (abstract noun suffix) → 'Luster, radiance, or brilliance'", 'vaḥ': "vaha = prāpaṇe (to carry, to convey) (as part of a Tatpuruṣa Samāsa) → 'Carrier, bearer'"}
+2025-05-19 10:28:09,052 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:28:09] "POST /query HTTP/1.1" 200 -
+2025-05-19 10:28:22,354 - __main__ - INFO - Processing query: find names related to creation
+2025-05-19 10:28:22,357 - __main__ - INFO - Response: ## Names related to 'creation' in the Viṣṇu Aṣṭottaraśatanāmam:
+
+**Padmanābha** (#15)
+**Meaning**: An epithet of Lord Viṣṇu, denoting 'The one from whose navel springs a lotus, symbolizing the source of **creation** through which Lord Brahma is born'.
+
+**Virāḍrūpa** (#103)
+**Meaning**: An epithet of Lord Viṣṇu signifying His universal, cosmic form that encompasses the entire **creation**.
+
+**Ādideva** (#105)
+**Meaning**: An epithet of Lord Viṣṇu, signifying the Supreme Being, the original source of all **creation**, the first one.
+
+**Bhāgīrathījanmabhūmipadāpadma** (#92)
+**Meaning**: An epithet of Lord Viṣṇu specifically referring to his Vāmana Avatāra, signifying his lotus-like foot that touched the highest realm (sky/Brahmaloka), the birthplace of the Ganges, causing it to flow down.
+
+**Svabhū** (#94)
+**Meaning**: An epithet of Lord Viṣṇu signifying that He is self-existent, without any **origin** or cause; existing by His own nature.
+
+**Jagatkāraṇa** (#97)
+**Meaning**: An epithet of Lord Viṣṇu signifying that He is the ultimate cause and **origin** of the entire universe.
+
+**Bhūtabhāvana** (#83)
+**Etymology**: (Complex etymology with multiple components)
+
+**Pāñcajanyadhara** (#38)
+**Etymology**: (Complex etymology with multiple components)
+
+**Śārṅgapāṇi** (#40)
+**Etymology**: (Complex etymology with multiple components)
+
+2025-05-19 10:28:22,358 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:28:22] "POST /query HTTP/1.1" 200 -
+2025-05-19 10:28:58,222 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:28:58] "GET /list_names HTTP/1.1" 200 -
+2025-05-19 10:29:07,443 - __main__ - INFO - Processing query: Tell me about Kalkī
+2025-05-19 10:29:07,462 - __main__ - INFO - Response: I couldn't find information about 'about kalkī'. Did you mean: Kalkī?
+2025-05-19 10:29:07,463 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:29:07] "POST /query HTTP/1.1" 200 -
+2025-05-19 10:29:14,836 - __main__ - INFO - Processing query: yes
+2025-05-19 10:29:14,842 - __main__ - INFO - Response: I'm not sure what you're asking. Please try one of these:
+- Ask about a specific name (e.g., 'meaning of Govinda')
+- Search for names related to a concept (e.g., 'names related to cows')
+- Ask about a name's position (e.g., 'what is the 21st name')
+2025-05-19 10:29:14,842 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:29:14] "POST /query HTTP/1.1" 200 -
+2025-05-19 10:29:26,393 - __main__ - INFO - Processing query: kalki
+2025-05-19 10:29:26,395 - __main__ - INFO - Response: **Kalkī** found in the Viṣṇu Aṣṭottaraśatanāmam.
+
+**Meaning**: An epithet of Lord Viṣṇu, referring to His future Kalkī avātara, last of Dashavatara.
+
+**Position**: 53
+
+You can ask about:
+meaning, etymology, vigrahavākya (word breakdown), pranam mantra
+2025-05-19 10:29:26,396 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:29:26] "POST /query HTTP/1.1" 200 -
+2025-05-19 10:30:25,905 - __main__ - INFO - Processing query: meaning of madhava
+2025-05-19 10:30:25,907 - __main__ - INFO - Response: **Mādhava** means: An epithet of Lord Viṣṇu, denoting 'The one who is the husband of Lakṣmī, the Goddess of Fortune'.
+2025-05-19 10:30:25,907 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:30:25] "POST /query HTTP/1.1" 200 -
+2025-05-19 10:30:36,385 - __main__ - INFO - Processing query: etymology of vishnu
+2025-05-19 10:30:36,385 - __main__ - INFO - Response: **Etymology of Viṣṇu**: viś = vyāptau (to pervade) + nu-pratyaya (suffix forming a noun indicating an agent or possessor of the action) → 'The all-pervading One'
+2025-05-19 10:30:36,386 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:30:36] "POST /query HTTP/1.1" 200 -
+2025-05-19 10:31:07,803 - __main__ - INFO - Processing query: vihsnu
+2025-05-19 10:31:07,806 - __main__ - INFO - Response: I found partial matches for 'vihsnu'.
+
+Did you mean: Viṣṇu (fuzzy, 91%), Vibhu (fuzzy, 73%)?
+
+Please confirm by typing Yes or No, or select, from the option below.
+2025-05-19 10:31:07,808 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:31:07] "POST /query HTTP/1.1" 200 -
+2025-05-19 10:31:12,120 - __main__ - INFO - Processing query: yes
+2025-05-19 10:31:12,138 - __main__ - INFO - Response: I couldn't find information about 'about viṣṇu'. Did you mean: Viṣṇu?
+2025-05-19 10:31:12,139 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:31:12] "POST /query HTTP/1.1" 200 -
+2025-05-19 10:31:37,021 - __main__ - INFO - Processing query: Find names related to creation
+2025-05-19 10:31:37,023 - __main__ - INFO - Response: ## Names related to 'creation' in the Viṣṇu Aṣṭottaraśatanāmam:
+
+**Padmanābha** (#15)
+**Meaning**: An epithet of Lord Viṣṇu, denoting 'The one from whose navel springs a lotus, symbolizing the source of **creation** through which Lord Brahma is born'.
+
+**Virāḍrūpa** (#103)
+**Meaning**: An epithet of Lord Viṣṇu signifying His universal, cosmic form that encompasses the entire **creation**.
+
+**Ādideva** (#105)
+**Meaning**: An epithet of Lord Viṣṇu, signifying the Supreme Being, the original source of all **creation**, the first one.
+
+**Bhāgīrathījanmabhūmipadāpadma** (#92)
+**Meaning**: An epithet of Lord Viṣṇu specifically referring to his Vāmana Avatāra, signifying his lotus-like foot that touched the highest realm (sky/Brahmaloka), the birthplace of the Ganges, causing it to flow down.
+
+**Svabhū** (#94)
+**Meaning**: An epithet of Lord Viṣṇu signifying that He is self-existent, without any **origin** or cause; existing by His own nature.
+
+**Jagatkāraṇa** (#97)
+**Meaning**: An epithet of Lord Viṣṇu signifying that He is the ultimate cause and **origin** of the entire universe.
+
+**Bhūtabhāvana** (#83)
+**Etymology**: (Complex etymology with multiple components)
+
+**Pāñcajanyadhara** (#38)
+**Etymology**: (Complex etymology with multiple components)
+
+**Śārṅgapāṇi** (#40)
+**Etymology**: (Complex etymology with multiple components)
+
+2025-05-19 10:31:37,024 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:31:37] "POST /query HTTP/1.1" 200 -
+2025-05-19 10:32:10,953 - __main__ - INFO - Processing query: give me names related to lotus
+2025-05-19 10:32:10,957 - __main__ - INFO - Response: ## Names related to 'lotus' in the Viṣṇu Aṣṭottaraśatanāmam:
+
+**Padmanābha** (#15)
+**Meaning**: An epithet of Lord Viṣṇu, denoting 'The one from whose navel springs a **lotus**, symbolizing the source of creation through which Lord Brahma is born'.
+
+**Puṇḍarīkākṣa** (#19)
+**Meaning**: An epithet of Lord Viṣṇu, denoting 'The one who has eyes like a **lotus**, symbolizing purity, beauty, and compassion.'
+
+**Bhāgīrathījanmabhūmipadāpadma** (#92)
+**Meaning**: An epithet of Lord Viṣṇu specifically referring to his Vāmana Avatāra, signifying his **lotus**-like foot that touched the highest realm (sky/Brahmaloka), the birthplace of the Ganges, causing it to flow down.
+
+2025-05-19 10:32:10,957 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:32:10] "POST /query HTTP/1.1" 200 -
+2025-05-19 10:32:36,692 - __main__ - INFO - Processing query: karthikeya
+2025-05-19 10:32:36,710 - __main__ - INFO - Response: I couldn't find any information about 'karthikeya' in my database.
+2025-05-19 10:32:36,711 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:32:36] "POST /query HTTP/1.1" 200 -
+2025-05-19 10:33:03,072 - __main__ - INFO - Processing query: explain the word lotus
+2025-05-19 10:33:03,092 - __main__ - INFO - Response: I couldn't find any information about 'the word lotus' in my database.
+2025-05-19 10:33:03,093 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:33:03] "POST /query HTTP/1.1" 200 -
+2025-05-19 10:33:21,506 - __main__ - INFO - Processing query: explain the word vishnu
+2025-05-19 10:33:21,527 - __main__ - INFO - Response: I couldn't find any information about 'the word vishnu' in my database.
+2025-05-19 10:33:21,527 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:33:21] "POST /query HTTP/1.1" 200 -
+2025-05-19 10:33:40,040 - __main__ - INFO - Processing query: explain vishnu
+2025-05-19 10:33:40,041 - __main__ - INFO - Response: **Analysis of Viṣṇu**:
+
+
+**Meaning**: The first name of Lord Viṣṇu (in the 108 names) signifying, that He is the All-pervading One, The One who reaches and moves everywhere throughout the Universe, The One who generates and sustains everything.
+
+
+**Etymology**: viś = vyāptau (to pervade) + nu-pratyaya (suffix forming a noun indicating an agent or possessor of the action) → 'The all-pervading One'
+
+
+**Vigrahavākya**: Viśati iti viṣṇuḥ → "The One who pervades everywhere is called Viṣṇu."
+
+
+**Position**: 1
+
+
+**Pranam Mantra**: oṁ viṣṇave namaḥ
+2025-05-19 10:33:40,042 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:33:40] "POST /query HTTP/1.1" 200 -
+2025-05-19 10:33:50,838 - __main__ - INFO - Processing query: explain the meaning of vishnu
+2025-05-19 10:33:50,838 - __main__ - INFO - Response: **Viṣṇu** means: The first name of Lord Viṣṇu (in the 108 names) signifying, that He is the All-pervading One, The One who reaches and moves everywhere throughout the Universe, The One who generates and sustains everything.
+2025-05-19 10:33:50,838 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 10:33:50] "POST /query HTTP/1.1" 200 -
+2025-05-19 11:47:56,308 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.137.228:8000
+2025-05-19 11:47:56,308 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-19 11:47:56,309 - werkzeug - INFO -  * Restarting with stat
+2025-05-19 11:47:56,463 - werkzeug - WARNING -  * Debugger is active!
+2025-05-19 11:47:56,469 - werkzeug - INFO -  * Debugger PIN: 130-135-246
+2025-05-19 11:48:02,651 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:48:02] "GET / HTTP/1.1" 200 -
+2025-05-19 11:48:07,048 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:48:07] "GET /list_names HTTP/1.1" 200 -
+2025-05-19 11:48:08,866 - __main__ - INFO - Processing query: Tell me about Acyuta
+2025-05-19 11:48:08,882 - __main__ - INFO - Response: I couldn't find information about 'about acyuta'. Did you mean: Acyuta, Bhūtātmā?
+2025-05-19 11:48:08,882 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:48:08] "POST /query HTTP/1.1" 200 -
+2025-05-19 11:48:37,853 - werkzeug - INFO -  * Detected change in '/Users/muki/Documents/Sanskrit_Project_6Sem/nlp_engine.py', reloading
+2025-05-19 11:48:37,894 - werkzeug - INFO -  * Restarting with stat
+2025-05-19 11:48:38,116 - werkzeug - WARNING -  * Debugger is active!
+2025-05-19 11:48:38,125 - werkzeug - INFO -  * Debugger PIN: 130-135-246
+2025-05-19 11:48:41,151 - werkzeug - INFO -  * Detected change in '/Users/muki/Documents/Sanskrit_Project_6Sem/nlp_engine.py', reloading
+2025-05-19 11:48:41,175 - werkzeug - INFO -  * Restarting with stat
+2025-05-19 11:48:41,295 - werkzeug - WARNING -  * Debugger is active!
+2025-05-19 11:48:41,303 - werkzeug - INFO -  * Debugger PIN: 130-135-246
+2025-05-19 11:48:43,324 - werkzeug - INFO -  * Detected change in '/Users/muki/Documents/Sanskrit_Project_6Sem/nlp_engine.py', reloading
+2025-05-19 11:48:43,405 - werkzeug - INFO -  * Restarting with stat
+2025-05-19 11:48:43,581 - werkzeug - WARNING -  * Debugger is active!
+2025-05-19 11:48:43,587 - werkzeug - INFO -  * Debugger PIN: 130-135-246
+2025-05-19 11:48:49,414 - __main__ - INFO - Processing query: tell me about acyuta
+2025-05-19 11:48:49,439 - __main__ - INFO - Response: I couldn't find information about 'about acyuta'. Did you mean: Acyuta, Bhūtātmā?
+2025-05-19 11:48:49,440 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:48:49] "POST /query HTTP/1.1" 200 -
+2025-05-19 11:48:56,559 - __main__ - INFO - Processing query: Tell me about Bhagavān
+2025-05-19 11:48:56,562 - __main__ - INFO - Response: **Analysis of Bhagavān**:
+
+
+**Meaning**: An epithet for Lord Viṣṇu, signifying the possessor of six divine qualities (ṣaḍguṇa-sampanna): jñāna (wisdom), vairāgya (detachment), yaśas (glory), śrī (wealth, splendor), aiśvarya (power, sovereignty), and śakti (strength, energy).
+
+
+**Etymology**: bhaja = sevāyām (to serve, to worship) + ga-pratyaya (suffix forming a noun) + vatup-pratyaya (possessive suffix) → 'possessor of wealth, glory, fame, etc.'
+
+
+**Vigrahavākya**: jñānañ ca vairāgyañ ca yaśaś ca śrīś ca aiśvaryañ ca śaktiś ca iti bhagaḥ. bhagaḥ asya asti iti Bhagavān. → "Knowledge and renunciation and fame and wealth and power and strength are called Bhaga. He who possesses these qualities is called Bhagavān."
+
+
+**Position**: 86
+
+
+**Pranam Mantra**: oṁ bhagavate namaḥ
+2025-05-19 11:48:56,564 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:48:56] "POST /query HTTP/1.1" 200 -
+2025-05-19 11:49:13,981 - __main__ - INFO - Processing query: analyse bhagavan
+2025-05-19 11:49:13,982 - __main__ - INFO - Response: **Analysis of Bhagavān**:
+
+
+**Meaning**: An epithet for Lord Viṣṇu, signifying the possessor of six divine qualities (ṣaḍguṇa-sampanna): jñāna (wisdom), vairāgya (detachment), yaśas (glory), śrī (wealth, splendor), aiśvarya (power, sovereignty), and śakti (strength, energy).
+
+
+**Etymology**: bhaja = sevāyām (to serve, to worship) + ga-pratyaya (suffix forming a noun) + vatup-pratyaya (possessive suffix) → 'possessor of wealth, glory, fame, etc.'
+
+
+**Vigrahavākya**: jñānañ ca vairāgyañ ca yaśaś ca śrīś ca aiśvaryañ ca śaktiś ca iti bhagaḥ. bhagaḥ asya asti iti Bhagavān. → "Knowledge and renunciation and fame and wealth and power and strength are called Bhaga. He who possesses these qualities is called Bhagavān."
+
+
+**Position**: 86
+
+
+**Pranam Mantra**: oṁ bhagavate namaḥ
+2025-05-19 11:49:13,983 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:49:13] "POST /query HTTP/1.1" 200 -
+2025-05-19 11:49:22,988 - werkzeug - INFO -  * Detected change in '/Users/muki/Documents/Sanskrit_Project_6Sem/nlp_engine.py', reloading
+2025-05-19 11:49:23,023 - werkzeug - INFO -  * Restarting with stat
+2025-05-19 11:49:23,199 - werkzeug - WARNING -  * Debugger is active!
+2025-05-19 11:49:23,204 - werkzeug - INFO -  * Debugger PIN: 130-135-246
+2025-05-19 11:49:28,243 - werkzeug - INFO -  * Detected change in '/Users/muki/Documents/Sanskrit_Project_6Sem/nlp_engine.py', reloading
+2025-05-19 11:49:28,283 - werkzeug - INFO -  * Restarting with stat
+2025-05-19 11:49:28,427 - werkzeug - WARNING -  * Debugger is active!
+2025-05-19 11:49:28,432 - werkzeug - INFO -  * Debugger PIN: 130-135-246
+2025-05-19 11:49:30,452 - werkzeug - INFO -  * Detected change in '/Users/muki/Documents/Sanskrit_Project_6Sem/nlp_engine.py', reloading
+2025-05-19 11:49:30,485 - werkzeug - INFO -  * Restarting with stat
+2025-05-19 11:49:30,615 - werkzeug - WARNING -  * Debugger is active!
+2025-05-19 11:49:30,620 - werkzeug - INFO -  * Debugger PIN: 130-135-246
+2025-05-19 11:49:39,097 - __main__ - INFO - Processing query: explain to me about vishnu
+2025-05-19 11:49:39,122 - __main__ - INFO - Response: I couldn't find any information about 'to me about vishnu' in my database.
+2025-05-19 11:49:39,123 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:49:39] "POST /query HTTP/1.1" 200 -
+2025-05-19 11:49:51,681 - __main__ - INFO - Processing query: explain to me about krishna
+2025-05-19 11:49:51,684 - __main__ - INFO - Response: I found partial matches for 'krishna'.
+
+Did you mean: Kṛṣṇa (fuzzy, 73%)?
+
+Please confirm by typing Yes or No, or select, from the option below.
+2025-05-19 11:49:51,685 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:49:51] "POST /query HTTP/1.1" 200 -
+2025-05-19 11:50:01,076 - __main__ - INFO - Processing query: explain to me about acyuta
+2025-05-19 11:50:01,094 - __main__ - INFO - Response: I couldn't find any information about 'to me about acyuta' in my database.
+2025-05-19 11:50:01,095 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:50:01] "POST /query HTTP/1.1" 200 -
+2025-05-19 11:51:20,679 - werkzeug - INFO -  * Detected change in '/Users/muki/Documents/Sanskrit_Project_6Sem/nlp_engine.py', reloading
+2025-05-19 11:51:20,713 - werkzeug - INFO -  * Restarting with stat
+2025-05-19 11:51:20,917 - werkzeug - WARNING -  * Debugger is active!
+2025-05-19 11:51:20,923 - werkzeug - INFO -  * Debugger PIN: 130-135-246
+2025-05-19 11:51:23,954 - werkzeug - INFO -  * Detected change in '/Users/muki/Documents/Sanskrit_Project_6Sem/nlp_engine.py', reloading
+2025-05-19 11:51:23,982 - werkzeug - INFO -  * Restarting with stat
+2025-05-19 11:51:24,190 - werkzeug - WARNING -  * Debugger is active!
+2025-05-19 11:51:24,195 - werkzeug - INFO -  * Debugger PIN: 130-135-246
+2025-05-19 11:51:26,861 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:51:26] "GET / HTTP/1.1" 200 -
+2025-05-19 11:51:32,575 - __main__ - INFO - Processing query: explain to me about keshava
+2025-05-19 11:51:32,600 - __main__ - INFO - Response: I couldn't find any information about 'to me about keshava' in my database.
+2025-05-19 11:51:32,601 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:51:32] "POST /query HTTP/1.1" 200 -
+2025-05-19 11:51:53,110 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:51:53] "GET /list_names HTTP/1.1" 200 -
+2025-05-19 11:51:54,808 - __main__ - INFO - Processing query: Tell me about Cakrapāṇi
+2025-05-19 11:51:54,811 - __main__ - INFO - Response: **Analysis of Cakrapāṇi**:
+
+
+**Meaning**: One who holds a Cakra (discus); an epithet of Lord Viṣṇu.
+
+
+**Etymology**: {'cakra': "cara = gatau (to go, to move) + kṛ-pratyaya (suffix forming noun) → 'movement or cyclic nature'", 'Pāṇi': "paṇa = vyavahāra-stutau ca (to deal, to trade, to praise) + kvip-pratyaya (suffix forming a noun) → 'commonly referred to as hand'"}
+
+
+**Vigrahavākya**: carati iti cakram. paṇyate anena iti pāṇiḥ. cakraṃ pāṇau yasya saḥ cakrapāṇiḥ → "That which moves is called cakra (wheel). That with which one deals or uses is called pāṇi (hand). The One who holds a Cakra (discus) in His hand is called Cakrapāṇi. "
+
+
+**Position**: 24
+
+
+**Pranam Mantra**: oṁ cakrapāṇaye namaḥ
+2025-05-19 11:51:54,818 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:51:54] "POST /query HTTP/1.1" 200 -
+2025-05-19 11:52:07,444 - __main__ - INFO - Processing query: explain to me about madhava
+2025-05-19 11:52:07,464 - __main__ - INFO - Response: I couldn't find any information about 'to me about madhava' in my database.
+2025-05-19 11:52:07,465 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:52:07] "POST /query HTTP/1.1" 200 -
+2025-05-19 11:52:59,130 - werkzeug - INFO -  * Detected change in '/Users/muki/Documents/Sanskrit_Project_6Sem/nlp_engine.py', reloading
+2025-05-19 11:52:59,161 - werkzeug - INFO -  * Restarting with stat
+2025-05-19 11:52:59,371 - werkzeug - WARNING -  * Debugger is active!
+2025-05-19 11:52:59,377 - werkzeug - INFO -  * Debugger PIN: 130-135-246
+2025-05-19 11:53:05,432 - werkzeug - INFO -  * Detected change in '/Users/muki/Documents/Sanskrit_Project_6Sem/nlp_engine.py', reloading
+2025-05-19 11:53:05,455 - werkzeug - INFO -  * Restarting with stat
+2025-05-19 11:53:05,650 - werkzeug - WARNING -  * Debugger is active!
+2025-05-19 11:53:05,656 - werkzeug - INFO -  * Debugger PIN: 130-135-246
+2025-05-19 11:53:33,985 - __main__ - INFO - Processing query: explain to me about madhava
+2025-05-19 11:53:34,010 - __main__ - INFO - Response: I couldn't find any information about 'to me about madhava' in my database.
+2025-05-19 11:53:34,011 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:53:34] "POST /query HTTP/1.1" 200 -
+2025-05-19 11:53:41,051 - __main__ - INFO - Processing query: explain to me about bhagavan
+2025-05-19 11:53:41,072 - __main__ - INFO - Response: I couldn't find any information about 'to me about bhagavan' in my database.
+2025-05-19 11:53:41,073 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:53:41] "POST /query HTTP/1.1" 200 -
+2025-05-19 11:53:50,729 - __main__ - INFO - Processing query: find dashavatar names
+2025-05-19 11:53:50,732 - __main__ - INFO - Response: ## Names related to 'dashavatar' in the Viṣṇu Aṣṭottaraśatanāmam:
+
+**Kṛṣṇa** (#3)
+**Meaning**: An epiphet of Lord Viṣṇu signifying, He is the All-attractive One; Kṛṣṇa Avatāra, also means 'black' or 'dark', the eighth of Dashavatara.
+
+**Matsyarūpa** (#45)
+**Meaning**: The One who took the form of a fish; an epithet of Lord Viṣṇu, referring to the Matsya avatāra, first of Dashavatara.
+
+**Kūrmatanu** (#46)
+**Meaning**: An epithet of Lord Viṣṇu, signifying 'The one whose body is a tortoise, referring to the Kūrma avatāra, second of Dashavatara.'
+
+**Kroḍarūpa** (#47)
+**Meaning**: An epithet of Lord Viṣṇu, signifying 'The one whose form is a boar, referring to the Varāha avatāra, third of Dashavatara.'
+
+**Nṛkesarī** (#48)
+**Meaning**: An epithet of Lord Viṣṇu, referring to his Narasiṁha avātara, fourth of Dashavatara.
+
+**Vāmana** (#49)
+**Meaning**: An epithet of Lord Viṣṇu, referring to his Vāmana avātara, fifth of Dashavatara.
+
+**Bhārgava** (#50)
+**Meaning**: An epithet of Lord Viṣṇu, referring to his Paraśurāma avātara, sixth of Dashavatara.
+
+**Rāma** (#51)
+**Meaning**: The one who delights all, the embodiment of bliss; an epithet of Lord Viṣṇu, referring to his Rāma avātara, seventh of Dashavatara.
+
+**Kalkī** (#53)
+**Meaning**: An epithet of Lord Viṣṇu, referring to His future Kalkī avātara, last of Dashavatara.
+
+**Buddhāvatāra** (#99)
+**Meaning**: An epithet of Lord Viṣṇu, referring to the Buddha Avatāra, ninth of Dashavatara.
+
+2025-05-19 11:53:50,732 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:53:50] "POST /query HTTP/1.1" 200 -
+2025-05-19 11:54:37,531 - __main__ - INFO - Processing query: explain to me about acyuta
+2025-05-19 11:54:37,553 - __main__ - INFO - Response: I couldn't find any information about 'to me about acyuta' in my database.
+2025-05-19 11:54:37,554 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:54:37] "POST /query HTTP/1.1" 200 -
+2025-05-19 11:55:32,047 - werkzeug - INFO -  * Detected change in '/Users/muki/Documents/Sanskrit_Project_6Sem/nlp_engine.py', reloading
+2025-05-19 11:55:32,086 - werkzeug - INFO -  * Restarting with stat
+2025-05-19 11:55:32,298 - werkzeug - WARNING -  * Debugger is active!
+2025-05-19 11:55:32,303 - werkzeug - INFO -  * Debugger PIN: 130-135-246
+2025-05-19 11:55:34,327 - werkzeug - INFO -  * Detected change in '/Users/muki/Documents/Sanskrit_Project_6Sem/nlp_engine.py', reloading
+2025-05-19 11:55:34,358 - werkzeug - INFO -  * Restarting with stat
+2025-05-19 11:55:34,481 - werkzeug - WARNING -  * Debugger is active!
+2025-05-19 11:55:34,486 - werkzeug - INFO -  * Debugger PIN: 130-135-246
+2025-05-19 11:55:39,541 - werkzeug - INFO -  * Detected change in '/Users/muki/Documents/Sanskrit_Project_6Sem/nlp_engine.py', reloading
+2025-05-19 11:55:39,569 - werkzeug - INFO -  * Restarting with stat
+2025-05-19 11:55:39,691 - werkzeug - WARNING -  * Debugger is active!
+2025-05-19 11:55:39,696 - werkzeug - INFO -  * Debugger PIN: 130-135-246
+2025-05-19 11:55:49,765 - __main__ - INFO - Processing query: explain to me about acyuta
+2025-05-19 11:55:49,774 - __main__ - INFO - Response: **Analysis of Acyuta**:
+
+
+**Meaning**: An epiphet of Lord Viṣṇu, signifying 'The infallible one, the imperishable one, the eternal one.'
+
+
+**Etymology**: {'a': "a = nañ-upasarga (prefix denoting negation) → 'not, without'", 'cyuta': "cyu = cyavane (to fall, to perish) + kta-pratyaya (suffix past participle) → 'fallen, perished'"}
+
+
+**Vigrahavākya**: cyavate iti cyutaḥ. na cyutaḥ kasmāt api iti acyutaḥ. → "One who falls, persishes is called Cyuta. He who has not fallen from anything and never perishes, is called Acyuta."
+
+
+**Position**: 61
+
+
+**Pranam Mantra**: oṁ acyutāya namaḥ
+2025-05-19 11:55:49,775 - werkzeug - INFO - 127.0.0.1 - - [19/May/2025 11:55:49] "POST /query HTTP/1.1" 200 -

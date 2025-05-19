@@ -66,7 +66,7 @@ class SanskritNLP:
                 r"what does (.+?) mean",
                 r"define (.+)",
                 r"translation of (.+)",
-                r"I want to know what (.+?) means"
+                r"I want to know what (.+?) means",
                 r"meaning of the word (.+)",
                 r"artha(?: of)? (.+)",
                 r"(.+) artha"
@@ -78,7 +78,7 @@ class SanskritNLP:
                 r"where does (.+?) come from",
                 r"derive (.+)",
                 r"how did (.+?) get its name",
-                r"how did (.+?) come about"
+                r"how did (.+?) come about",
                 r"what is the root of (.+)",
                 r"what is the origin of (.+)",
                 r"from which root is (.+?) formed",
@@ -107,11 +107,13 @@ class SanskritNLP:
             ],
 
             "analysis": [
-                r"(?:analyze|analyse|explain|describe|give me|tell me|what do you know about|details of|everything about|who is|what is)\s*(.+)",
+                r"(?:analyze|analyse|explain|describe|give me|tell me|what do you know about|details of|everything about|who is|what is)\s*(?:to me)?\s*(?:about)?\s*(.+)",
                 r"analysis of (.+)",
                 r"info on (.+)",
                 r"information on (.+)",
                 r"explanation of (.+)",
+                r"tell me about (.+)",
+                r"explain to me about (.+)",
                 r"info(?:rmation)? about (.+)"
             ],
 
